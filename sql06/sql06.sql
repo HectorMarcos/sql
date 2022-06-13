@@ -26,3 +26,8 @@ SELECT * FROM movies order by title limit 5 offset 5;
 #5
 select city, population from north_american_cities where country = 'Canada';
 select * from north_american_cities where country = 'United States' order by latitude desc;
+select * from north_american_cities where longitude < (select longitude from north_american_cities where city = 'Chicago') order by longitude;
+select * from north_american_cities where country = 'Mexico' order by population desc limit 2;
+select * from north_american_cities where country = 'United States' order by population desc limit 2 offset 2;
+
+#6
