@@ -31,3 +31,8 @@ select * from north_american_cities where country = 'Mexico' order by population
 select * from north_american_cities where country = 'United States' order by population desc limit 2 offset 2;
 
 #6
+SELECT * FROM movies inner join boxoffice on id = movie_id;
+SELECT * FROM movies inner join boxoffice on id = movie_id where international_sales > domestic_sales;
+SELECT * FROM movies inner join boxoffice on id = movie_id order by rating desc
+
+#7
